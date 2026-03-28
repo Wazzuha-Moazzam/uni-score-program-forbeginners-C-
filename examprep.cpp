@@ -99,6 +99,32 @@ void average(){
     
 }
 
+void gradeCount(){
+    int gradeA = 0, gradeB = 0, gradeC = 0, gradeD = 0, gradeF = 0;
+    for (int q = 0; q < 4; q ++){
+        if (studentGrade[q] == "A"){
+            gradeA++;
+        }
+        else if (studentGrade[q] == "B"){
+            gradeB++;
+        }
+        else if (studentGrade[q] == "C"){
+            gradeC++;
+        }
+        else if (studentGrade[q] == "D"){
+            gradeD++;
+        }
+        else if (studentGrade[q] == "F"){
+            gradeF++;
+        }
+    }
+    cout << "Number of students with grade A: " << gradeA << endl;
+    cout << "Number of students with grade B: " << gradeB << endl;
+    cout << "Number of students with grade C: " << gradeC << endl;
+    cout << "Number of students with grade D: " << gradeD << endl;
+    cout << "Number of students with grade F: " << gradeF << endl;
+}
+
 int main(){
 
     enterData();
@@ -131,8 +157,7 @@ int main(){
                 search();
             }
             else if (choice == 5){
-                // gradeCount(); // This function is not implemented in the provided code
-                cout << "Grade Count function is not implemented yet." << endl;
+                gradeCount();
             }
             else if (choice == 6){
                 working = false;
